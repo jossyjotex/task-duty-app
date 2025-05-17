@@ -7,10 +7,10 @@ const MappedTasks = ({ _id, taskTitle, description, tag }) => {
   return (
     <>
       <div className="flex justify-between items-center border-b-[0.5px] border-b-[#B8B6B6]">
-        <h3
+      <h3
           className={`${
-            tag === "Urgent"
-          } ? "text-[#F38383]" : "text-[#73C3A6]" text-[24px] font-[400] pb-2`}
+            tag === "Urgent" ? "text-[#F38383]" : "text-[#73C3A6]"
+          } text-[24px] font-[400] pb-2 `}
         >
           {tag}
         </h3>
@@ -19,7 +19,7 @@ const MappedTasks = ({ _id, taskTitle, description, tag }) => {
             className="bg-[#974FD0] cursor-pointer text-[#FAF9FB] w-[50px] md:w-[126px] h-[40px] md:h-[50px] rounded-[8px] flex 
           items-center justify-center"
           >
-            <Link className="flex items-center gap-1 ">
+            <Link to={`/task-id/${_id}`} className="flex items-center gap-1 ">
               <img src={editsign} alt="edit-sign" className="w-8 h-8 " />
               <span className="hidden md:block">Edit</span>
             </Link>

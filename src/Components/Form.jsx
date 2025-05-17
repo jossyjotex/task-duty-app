@@ -26,13 +26,13 @@ const Form = ({ FormTitle, formData, onChange, onSubmit }) => {
                 <label htmlFor="task-title" className="bg-white font-[400] text-[30px] text-[#9C9C9C]"> Task Title</label>
                 <input type="text" className="w-full border-1 border-[#B8B6B6] rounded-[5px] h-[84px] outline-none ps-10 placeholder:text-[#CCCCCC] placeholder:text-[20px] 
                 md:placeholder:text-[22px] placeholder:font-400"  placeholder="E.g Project Defense, Assignment..." id="task-title" value={formData.TaskTitle}
-                onChange={onChange}/>
+                onChange={onChange} name="taskTitle"/>
             </div>
             {/* textarea */}
             <div className="relative">
                 <label htmlFor="description" className="absolute bottom-58 left-9 bg-white font-[400] text-[30px]
                 text-[#9C9C9C] ">Description</label>
-                <textarea name="" id="description" className="w-full border-1 border-[#B8B6B6] rounded-[5px] h-[250px] outline-none
+                <textarea name="description" id="description" className="w-full border-1 border-[#B8B6B6] rounded-[5px] h-[250px] outline-none
                 ps-10 pt-10 placeholder:text-[#CCCCCC] placeholder:text-[20px] 
                 md:placeholder:text-[22px] placeholder:font-400 " placeholder="Briefly describe your task..." value={formData.description} onChange={onChange}></textarea>
 
@@ -40,7 +40,7 @@ const Form = ({ FormTitle, formData, onChange, onSubmit }) => {
             {/* select field */}
             <div  className="flex flex-col relative">
                 <label htmlFor="tags" className="absolute bottom-9 left-9 bg-white font-[400] text-[30px] text-[#9C9C9C]">Tags</label>
-                <select name="" id="tags" className="border-1 outline-none h-15 border-[#B8B6B6] rounded-[15px] ps-9 " 
+                <select name="tag" id="tags" className="border-1 outline-none h-15 border-[#B8B6B6] rounded-[15px] ps-9 " 
                 value={formData.tag} onChange={onChange}>
                     <option value="" disabled selected className="text-red-800 font-[400] text-[22px] ">Urgent Important</option>
                     <option value="Urgent">Urgent</option>

@@ -25,7 +25,7 @@ const Form = ({ FormTitle, formData, onChange, onSubmit }) => {
             <div className="relative">
                 <label htmlFor="task-title" className="bg-white font-[400] text-[30px] text-[#9C9C9C]"> Task Title</label>
                 <input type="text" className="w-full border-1 border-[#B8B6B6] rounded-[5px] h-[84px] outline-none ps-10 placeholder:text-[#CCCCCC] placeholder:text-[20px] 
-                md:placeholder:text-[22px] placeholder:font-400"  placeholder="E.g Project Defense, Assignment..." id="task-title" value={formData.TaskTitle}
+                md:placeholder:text-[22px] placeholder:font-400"  placeholder="E.g Project Defense, Assignment..." id="task-title" value={formData.taskTitle}
                 onChange={onChange} name="taskTitle"/>
             </div>
             {/* textarea */}
